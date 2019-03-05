@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'jobs.apps.JobsConfig', #generated after migrate in apps.py file
+    'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [
@@ -72,11 +74,18 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-
+# można zmienić na PostgreSQL, trzeba w cmd psql dodać db CREATE DATABASE portfoliodb;
+# nowa db to nowy superuser w cmd
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'portfoliodb',
+        'USER': 'postgres',
+        'PASSWORD': 'abc123',
+        'HOST': 'localhost',    #to samo co '127.0.0.1',
+        'PORT': '5432',
+        #'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -118,3 +127,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #where images will be saved
+#w Jobs mamy upload_to image i obrazy będą zapisywane w media/image folderze
+
+MEDIA_URL = '/media/'   #url strony/media/images/jakis plik.jpg
