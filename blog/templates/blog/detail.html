@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Grzegorz's Page</title>
+    <title>{{ blog.title }}</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
 
@@ -35,10 +35,9 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="album.css" rel="stylesheet">
   </head>
   <body>
-  <header>
+ <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <a class="navbar-brand" href="{% url 'home' %}">Grzegorz Kania</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,7 +48,7 @@
               <a class="nav-item nav-link" href="http://twitter.com/nickchuckwalter">Twitter</a>
                 <!-- dodaliśmy load static fiels to możemy teraz brać liki ze static -->
               <a class="nav-item nav-link" href="{% static 'resume.pdf' %}">Resume</a>
-              <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>     #działa bo daliśmy name allblogs dla tego url
+              <a class="nav-item nav-link active" href="{% url 'allblogs' %}">Blog</a>     #działa bo daliśmy name allblogs dla tego url
             </div>
           </div>
         </nav>
@@ -57,33 +56,20 @@
 
 <main role="main">
 
-  <section class="jumbotron text-center">
-    <div class="container">
-      <h1 class="jumbotron-heading">Hi, I'm Grzegorz.</h1>
-      <p class="lead text-muted">My name is Grzegorz and I learn Django. I want to make great websites that people like to use.</p>
-      <p>
-        <a href="mailto:g.kania@sscc.com.pl" class="btn btn-primary my-2">Email me</a>
-      </p>
-      <img class="img-float" heigh=200 width=200 src="{%static 'greg.jpg' %}" />
-    </div>
-  </section>
-
-  <div class="album py-5 bg-light">
+  <div class="blog-post hfeed">
     <div class="container">
 
-      <div class="row">
+          <div class="card mb-4 shadow-sm p-1">
+            <!-- idziemy do detail z parametrem id i będzie blog/id -->
+            <h1 class="card-text p-3">{{ blog.title }}</h1>
+            <p>{{ blog.put_date }}</p>
 
-        {% for job in jobs.all %}
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img class="card-img-top" src="{{ job.image.url }}" />
+            <img class="img-fluid" src="{{ blog.image.url }}" />
             <div class="card-body">
-              <p class="card-text">{{ job.summary }}</p>
+              <p class="card-text">{{ blog.body}}</p>
             </div>
           </div>
-        </div>
-        {% endfor %}
-      </div>
+
     </div>
   </div>
 

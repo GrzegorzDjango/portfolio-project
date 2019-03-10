@@ -126,7 +126,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'portfolio/static/'),
+]
+#w terminalu możemy wszystkie static files zebrać do jednego folderu (portfolio/static/) pisząc:
+#python manage.py collectstatic
+#dodatkowo np. w home.html dodajemy linijkę {% load staticfiles %} żeby mieć dostęp
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')     #tu będą zapisane nasze static files'
+STATIC_URL = '/static/' #gdy na stronie otworzy się plik ze static to path będzie /static/nazwapliku
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #where images will be saved
 #w Jobs mamy upload_to image i obrazy będą zapisywane w media/image folderze
