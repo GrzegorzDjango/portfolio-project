@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="30e61d07-5719-4af9-b092-170750c231c8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/portfolio/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="30e61d07-5719-4af9-b092-170750c231c8" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/portfolio/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="139" column="49" lean-forward="true" selection-start-line="139" selection-start-column="49" selection-end-line="139" selection-end-column="49" />
+            <state relative-caret-position="66">
+              <caret line="78" selection-start-line="78" selection-end-line="89" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -277,12 +275,12 @@
       <workItem from="1551807219011" duration="2205000" />
       <workItem from="1551975045376" duration="2393000" />
       <workItem from="1552118733399" duration="13868000" />
-      <workItem from="1552202817780" duration="1298000" />
+      <workItem from="1552202817780" duration="1899000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28735000" />
+    <option name="totallyTimeSpent" value="29336000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1107" height="589" extended-state="6" />
@@ -429,8 +427,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/portfolio/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="139" column="49" lean-forward="true" selection-start-line="139" selection-start-column="49" selection-end-line="139" selection-end-column="49" />
+        <state relative-caret-position="66">
+          <caret line="78" selection-start-line="78" selection-end-line="89" selection-end-column="1" />
         </state>
       </provider>
     </entry>
