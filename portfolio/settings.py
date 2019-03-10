@@ -140,3 +140,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #where images will be saved
 #w Jobs mamy upload_to image i obrazy będą zapisywane w media/image folderze
 
 MEDIA_URL = '/media/'   #url strony/media/images/jakis plik.jpg
+
+try:
+    from local_setting import *
+except ImportError:
+    pass
